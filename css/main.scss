@@ -181,18 +181,18 @@ img {
           color: $color-primary;
         }
       }
-      &.has-arrow{
-        &.hover{
-          a{
+      &.has-arrow {
+        &.hover {
+          a {
             color: $color-primary;
-            &:after{
+            &:after {
               border-top: 0;
               border-bottom: 5px solid $color-primary;
             }
           }
         }
-        a{
-          &:after{
+        a {
+          &:after {
             position: absolute;
             top: 35px;
             right: 5px;
@@ -255,6 +255,7 @@ img {
     }
   }
 }
+
 .drop-nav {
   position: absolute;
   top: 74px;
@@ -295,9 +296,62 @@ img {
   }
 }
 
+.drop-al-l {
+  width: 580px;
+  float: left;
+  background: url(../images/drop-dl.jpg) right center no-repeat;
+  margin-right: 60px;
+  .al-tab {
+    @include clearfix();
+    margin-bottom: 16px;
+    li {
+      float: left;
+      width: 92px;
+      font-size: 12px;
+      & + li {
+        margin-left: 15px;
+      }
+      &.active{
+        a{
+          border-color: #b69454;
+          color: #b69454;
+        }
+      }
+      a {
+        display: block;
+        text-align: center;
+        line-height: 28px;
+        border: 1px solid #aaa;
+        @include border-radius(3px);
+      }
+    }
+  }
+  .al-tab-content{
+    .al-tab-body{
+      display: none;
+      font-size: 12px;
+      a{
+        color: #b69454;
+        & + a {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}
+
 .drop-last-item {
   float: left;
   width: 420px;
+  &.last-item-design{
+    width: 360px;
+  }
+  &.drop-last-case{
+    width: 560px;
+    a{
+      width: 105px;
+    }
+  }
   a {
     float: left;
     width: 25%;
@@ -308,6 +362,97 @@ img {
     span {
       display: block;
       font-size: 14px;
+    }
+  }
+  .drop-last-search{
+    width: 260px;
+    float: left;
+    margin-left: 70px;
+    .search-txt{
+      margin-top: 10px;
+      color: $color-light;
+      a{
+        width: auto;
+        float: none;
+        color: $color-light;
+      }
+    }
+  }
+}
+
+.drop-last-design{
+  float: left;
+  width: 420px;
+  .last-design-hd{
+    float: left;
+    width: 80px;
+    margin-top: 15px;
+    text-align: right;
+    color: #b69454;
+    margin-right: 25px;
+    i{
+      margin-right: 5px;
+    }
+  }
+  .last-design-bd{
+    overflow: hidden;
+    ul{
+      @include clearfix();
+      li{
+        float: left;
+        text-align: center;
+        margin: 0 10px;
+        .design-link{
+          display: block;
+          img{
+            width: 84px;
+            height: 84px;
+            @include border-radius(50%);
+            border: 1px solid #fff;
+          }
+        }
+        span{
+          display: block;
+          margin-top: 5px;
+          a{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.fw-wrap{
+  @include clearfix();
+  .fw-media{
+    float: left;
+    width: 25%;
+    .fw-media-hd{
+      float: left;
+      margin-right: 20px;
+      i{
+        display: block;
+        width: 76px;
+        height: 76px;
+        text-align: center;
+        line-height: 74px;
+        border: 1px solid #969696;
+        @include border-radius(50%);
+        font-size: 42px;
+        color: #969696;
+      }
+    }
+    .fw-media-bd{
+      overflow: hidden;
+      h4{
+        margin-top: 15px;
+        font-size: 18px;
+      }
+      p{
+        font-size: 12px;
+        color: $color-light;
+      }
     }
   }
 }
@@ -427,7 +572,7 @@ img {
       float: right;
       font-size: 14px;
       color: $color-light;
-      &:hover{
+      &:hover {
         color: $color-primary;
       }
     }
@@ -643,62 +788,62 @@ nav {
   border-bottom: 1px solid #34414d;
 }
 
-.footer-a-top{
+.footer-a-top {
   padding-top: 105px;
   @include clearfix();
-  a{
+  a {
     color: #ffffff;
-    &:hover{
+    &:hover {
       color: $color-primary;
     }
   }
-  .footer-a-logo{
+  .footer-a-logo {
     float: left;
     margin-right: 140px;
-    img{
+    img {
       display: block;
       width: 155px;
     }
   }
-  .footer-a-center{
+  .footer-a-center {
     float: left;
-    dl{
+    dl {
       width: 140px;
       float: left;
       color: #ffffff;
-      &.last-dl{
+      &.last-dl {
         border-right: 1px solid #34414d;
         height: 186px;
       }
-      dt{
+      dt {
         font-size: 16px;
         font-weight: normal;
         margin-bottom: 17px;
       }
-      dd{
+      dd {
         font-size: 14px;
         margin-bottom: 15px;
       }
     }
   }
-  .footer-a-right{
+  .footer-a-right {
     float: left;
     padding-left: 80px;
     height: 186px;
     border-left: 1px solid #13191d;
-    .detail-share{
+    .detail-share {
       .jiathis_style_24x24 {
         display: inline-block;
         vertical-align: middle;
         .jtico {
           width: 46px !important;
           height: 46px !important;
-          line-height: 44px!important;
+          line-height: 44px !important;
           text-align: center;
           border: 1px solid #919599;
           @include border-radius(50%);
           color: #919599;
-          &:hover{
+          &:hover {
             border-color: #ffffff;
             color: #ffffff;
           }
@@ -714,11 +859,11 @@ nav {
         }
       }
     }
-    p{
+    p {
       padding-top: 20px;
       color: #ffffff;
     }
-    h4{
+    h4 {
       font-size: 24px;
       font-weight: normal;
       color: $color-primary;
@@ -726,11 +871,11 @@ nav {
   }
 }
 
-.footer-a-bot{
+.footer-a-bot {
   padding-top: 100px;
   color: $color-primary;
   font-size: 12px;
-  a{
+  a {
     display: inline-block;
     margin-right: 15px;
     margin-bottom: 5px;
@@ -746,7 +891,7 @@ nav {
   text-align: center;
   color: #ffffff;
   font-size: 12px;
-  a{
+  a {
     color: #ffffff;
   }
 }
@@ -1353,9 +1498,9 @@ nav {
   }
   .right-control {
     float: right;
-    .right-share{
-      &:hover{
-        .drop-share{
+    .right-share {
+      &:hover {
+        .drop-share {
           display: block;
         }
       }
@@ -1383,7 +1528,8 @@ nav {
 
   }
 }
-.drop-share{
+
+.drop-share {
   position: absolute;
   left: 10px;
   top: 40px;
@@ -1392,7 +1538,7 @@ nav {
   z-index: 1000;
   background-color: #e7e6e5;
   display: none;
-  &:before{
+  &:before {
     content: '';
     position: absolute;
     top: -10px;
@@ -1406,12 +1552,12 @@ nav {
     border-bottom: 10px solid #e7e6e5;
   }
   .jiathis_style_24x24 {
-    a{
+    a {
       @include clearfix();
       display: block;
       height: 34px;
       line-height: 34px;
-      & + a{
+      & + a {
         border-top: 1px dashed #c9c9c9;
         color: #666666;
       }
@@ -1421,12 +1567,13 @@ nav {
       float: none;
       background-image: none !important;
       padding-left: 0 !important;
-      i{
+      i {
         font-size: 20px;
       }
     }
   }
 }
+
 .ad-gallery {
   position: relative;
   width: 100%;
@@ -1452,7 +1599,7 @@ nav {
       width: 25%;
       display: block;
       z-index: 100;
-      cursor: url(http://img.to8to.com/to8to_img/xgt/up_r.cur),auto !important;
+      cursor: url(http://img.to8to.com/to8to_img/xgt/up_r.cur), auto !important;
     }
     .ad-prev {
       position: absolute;
@@ -1462,7 +1609,7 @@ nav {
       width: 25%;
       display: block;
       z-index: 100;
-      cursor: url(http://img.to8to.com/to8to_img/xgt/up_l.cur),auto !important;
+      cursor: url(http://img.to8to.com/to8to_img/xgt/up_l.cur), auto !important;
     }
     .ad-prev .ad-prev-image {
       width: 30px;
@@ -1557,7 +1704,7 @@ nav {
     left: -20px;
     width: 13px;
     display: block;
-    &:before{
+    &:before {
       content: '\e948';
       font-family: "iconfont" !important;
       font-size: 18px;
@@ -1573,7 +1720,7 @@ nav {
     right: -20px;
     width: 13px;
     line-height: 66px;
-    &:before{
+    &:before {
       content: '\e949';
       font-family: "iconfont" !important;
       font-size: 18px;
@@ -1680,10 +1827,10 @@ nav {
     border-right: 10px solid transparent;
   }
   &.open {
-    .floor-body{
+    .floor-body {
       height: 332px;
     }
-    .floor-footer{
+    .floor-footer {
       .icon-jiantou1 {
         display: none;
       }
@@ -2144,7 +2291,7 @@ nav {
     line-height: 24px;
     .more {
       color: $color-light;
-      &:hover{
+      &:hover {
         color: $color-primary;
       }
     }
@@ -2416,12 +2563,12 @@ nav {
           font-weight: normal;
           position: relative;
           padding-bottom: 10px;
-          .drop-share{
+          .drop-share {
             top: 30px;
             left: -10px;
           }
-          &:hover{
-            .drop-share{
+          &:hover {
+            .drop-share {
               display: block;
             }
           }
@@ -2458,7 +2605,7 @@ nav {
       padding-top: 10px;
       a {
         margin: 0 5px;
-        i{
+        i {
           vertical-align: middle;
         }
         &.active {
@@ -2843,7 +2990,7 @@ nav {
       a {
         position: relative;
         color: $color-primary;
-        &:before{
+        &:before {
           content: '';
           position: absolute;
           top: 32px;
@@ -3182,17 +3329,17 @@ nav {
     @include border-radius(2px);
     text-align: center;
     padding: 40px;
-    .page-msg{
+    .page-msg {
       position: absolute;
       bottom: 12px;
       right: 12px;
       font-size: 35px;
       color: #666666;
-      small{
+      small {
         font-size: 16px;
       }
     }
-    img{
+    img {
       height: 100%;
     }
     .ht-tag {
@@ -3215,64 +3362,64 @@ nav {
     padding-top: 15px;
     background-color: #ffffff;
     @include border-radius(2px);
-    .ht-side-inner{
+    .ht-side-inner {
       padding: 10px 20px;
-      .ht-side-a{
+      .ht-side-a {
         padding: 0 10px;
         border-bottom: 1px dashed #dcdcdc;
-        h4{
+        h4 {
           margin-top: 20px;
           font-size: 28px;
           font-weight: normal;
         }
-        .ht-disc{
+        .ht-disc {
           color: #666666;
           font-size: 16px;
           padding-bottom: 28px;
-          span{
+          span {
             margin-right: 20px;
           }
         }
       }
-      .ht-side-b{
+      .ht-side-b {
         padding: 20px 10px 0;
         color: #666666;
         border-bottom: 1px dashed #dcdcdc;
-        h4{
+        h4 {
           margin: 0;
           font-size: 16px;
           font-weight: normal;
         }
-        .b-disc{
+        .b-disc {
           padding: 20px 0;
-          a{
+          a {
             text-align: center;
             display: inline-block;
-            & + a{
+            & + a {
               margin-left: 30px;
             }
-            i{
+            i {
               color: $color-light;
               font-size: 24px;
             }
-            span{
+            span {
               margin-left: 5px;
               display: block;
             }
           }
         }
       }
-      .ht-side-c{
+      .ht-side-c {
         padding: 30px 10px;
-        h4{
+        h4 {
           margin-top: 0;
           font-size: 16px;
           font-weight: normal;
           margin-bottom: 10px;
         }
-        .c-disc{
+        .c-disc {
           color: #666666;
-          p{
+          p {
             margin-bottom: 5px;
           }
         }
